@@ -5,7 +5,7 @@ using System.IO;
 
 namespace Toguchi
 {
-	public class PngPresentationManager : MonoBehaviour {
+	public class uPngPresentation : MonoBehaviour {
 		public RenderTexture targetTexture; //描画するRenderTexture
 
 		[SerializeField]
@@ -18,7 +18,6 @@ namespace Toguchi
 
 		int currentIndex = 0;
 
-		// Use this for initialization
 		void Start () {
 			textureList = new List<Texture2D>();
 			GetTextures(folderName);
@@ -27,7 +26,6 @@ namespace Toguchi
 				Graphics.Blit(textureList[0],targetTexture);
 		}
 		
-		// Update is called once per frame
 		void Update () {
 			if(useArrowKey)
 			{
